@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shahin Mir Jalili — Software-Entwickler & Gründer</title>
+  <meta name="description" content="Portfolio von Shahin Mir Jalili — iOS, Web & KI. TrackX (App Store), FalconTech Solutions, TapaLoca, SOVERRA, ask-gdpr.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0a0a'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='14' font-weight='700' fill='%23ff5a1f' text-anchor='middle'%3ESM%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="assets/vendor/lenis.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__logo">SMJ</div>
+    <div class="nav__right">
+      <div class="nav__links">
+        <a href="#work" data-i18n="nav.work">Projekte</a>
+        <a href="#journey" data-i18n="nav.journey">Werdegang</a>
+        <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+      </div>
+      <button class="lang-toggle" id="langToggle" aria-label="Sprache wechseln">EN</button>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero__stage">
+      <h1 class="hero__title hero__title--back" aria-label="Shahin Mir Jalili">
+        <span class="line"><span>Shahin</span></span>
+        <span class="line"><span class="ghost">Mir Jalili</span></span>
+      </h1>
+      <div class="hero__portrait">
+        <img src="assets/portrait.jpg" alt="Portrait von Shahin Mir Jalili" fetchpriority="high">
+      </div>
+      <div class="hero__title hero__title--front" aria-hidden="true">
+        <span class="line"><span class="ghost">Shahin</span></span>
+        <span class="line"><span>Mir Jalili</span></span>
+      </div>
+      <p class="hero__tag" data-i18n="hero.tag">Software-Entwickler &amp; Gründer. Apps, Web &amp; KI — selbst beigebracht, nachts gebaut, live im Store.</p>
+    </div>
+    <div class="hero__meta">
+      <span data-i18n="hero.loc">Holzminden, Deutschland</span>
+      <span class="scroll-cue">
+        <span data-i18n="hero.scroll">Scrollen</span>
+        <svg width="12" height="14" viewBox="0 0 12 14" fill="none" aria-hidden="true"><path d="M6 1v11M1.5 8.5 6 13l4.5-4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </div>
+  </header>
+
+  <section class="statement">
+    <div class="wrap">
+      <p class="statement__text" id="statementText" data-i18n="statement.big">Kein Informatik-Studium. Eine <em>App im App Store</em>. Eine eigene <em>Agentur</em>. Kunden, die täglich damit arbeiten.</p>
+      <p class="statement__sub reveal" data-i18n="statement.sub">Ich habe mir Programmieren selbst beigebracht — nachts, neben Vollzeit-Jobs. Heute baue ich Produkte, die live sind und benutzt werden. Nicht perfekt auf dem Papier, sondern bewiesen in der Praxis.</p>
+    </div>
+  </section>
+
+  <section class="work" id="work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-i18n="work.title">Ausgewählte Projekte</h2>
+        <span class="count">01 — 05</span>
+      </div>
+
+      <article class="case">
+        <div class="case__media reveal" data-asset="case-trackx">
+          <div class="ph">TRACKX</div>
+        </div>
+        <div class="case__body">
+          <span class="case__num">01</span>
+          <h3 class="case__title">TrackX</h3>
+          <p class="case__desc" data-i18n="case.trackx">iOS-App für Door-to-Door-Vertriebsteams — live im Apple App Store. GPS-Gebiets-Tracking, OCR-Kamera, Earnings-Dashboard, Team-Features. Komplett allein entwickelt: Konzept, Design, Code, Release.</p>
+          <div class="case__tags">
+            <span>Swift</span><span>SwiftUI</span><span>Firebase</span><span>StoreKit 2</span><span>MapKit</span>
+          </div>
+          <a class="case__link" href="https://apps.apple.com/app/id6757627264" target="_blank" rel="noopener">
+            <span data-i18n="case.link.store">Im App Store</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11 11 1M4 1h7v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media reveal" data-asset="case-falcontech">
+          <div class="ph">FALCONTECH</div>
+        </div>
+        <div class="case__body">
+          <span class="case__num">02</span>
+          <h3 class="case__title">FalconTech Solutions</h3>
+          <p class="case__desc" data-i18n="case.falcontech">Meine eigene Web- &amp; KI-Agentur. 4+ Kundenprojekte live, eigenes CRM mit 350+ Leads, Team- und Kunden-Portale, automatisierte Akquise-Pipeline.</p>
+          <div class="case__tags">
+            <span>HTML/CSS/JS</span><span>Supabase</span><span>Vercel</span><span>Node.js</span><span>KI-Agenten</span>
+          </div>
+          <a class="case__link" href="https://falcontechsolutions.de" target="_blank" rel="noopener">
+            <span data-i18n="case.link.site">Zur Website</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11 11 1M4 1h7v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media reveal" data-asset="case-tapaloca">
+          <div class="ph">TAPALOCA</div>
+        </div>
+        <div class="case__body">
+          <span class="case__num">03</span>
+          <h3 class="case__title">TapaLoca</h3>
+          <p class="case__desc" data-i18n="case.tapaloca">Restaurant-Website mit Live-Buchungssystem in Produktion — echte Reservierungen, jeden Tag. Kapazitäts-Logik, Self-Service-Portal, Keep-Alive-Infrastruktur.</p>
+          <div class="case__tags">
+            <span>Supabase</span><span>Vercel</span><span>Buchungssystem</span><span>Produktion</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media reveal" data-asset="case-soverra">
+          <div class="ph">SOVERRA</div>
+        </div>
+        <div class="case__body">
+          <span class="case__num">04</span>
+          <h3 class="case__title">SOVERRA</h3>
+          <p class="case__desc" data-i18n="case.soverra">Lokaler KI-Terminal-Agent mit eigener TUI — läuft 100% offline auf eigener Hardware. 71 automatisierte Tests, kein Cloud-Zwang, volle Datenhoheit.</p>
+          <div class="case__tags">
+            <span>Python</span><span>TUI</span><span>Lokale LLMs</span><span>Offline-first</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media reveal" data-asset="case-askgdpr">
+          <div class="ph">ASK-GDPR</div>
+        </div>
+        <div class="case__body">
+          <span class="case__num">05</span>
+          <h3 class="case__title">ask-gdpr</h3>
+          <p class="case__desc" data-i18n="case.askgdpr">RAG-System über alle 99 DSGVO-Artikel — Fragen in Alltagssprache, Antworten mit Artikel-Beleg. Mit eigener Eval-Pipeline zur Messung der Antwortqualität.</p>
+          <div class="case__tags">
+            <span>Python</span><span>Flask</span><span>Claude API</span><span>RAG</span><span>Evals</span>
+          </div>
+          <a class="case__link" href="https://github.com/ShahinMirJalili/ask-gdpr" target="_blank" rel="noopener">
+            <span>GitHub</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11 11 1M4 1h7v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="journey" id="journey">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-i18n="journey.title">Mein Weg</h2>
+        <span class="count">2019 — 2026</span>
+      </div>
+      <p class="journey__intro reveal" data-i18n="journey.intro">Kein gerader Weg. Aber jeder Schritt hat sich ausgezahlt — vom Fließband zur eigenen App im App Store.</p>
+
+      <div class="tl">
+        <div class="tl__line"><div class="tl__progress" id="tlProgress"></div></div>
+
+        <div class="tl__item reveal">
+          <span class="tl__dot"></span>
+          <div class="tl__row">
+            <div>
+              <div class="tl__year">2019</div>
+              <div class="tl__title" data-i18n="tl.2019.t">Hauptschulabschluss, Göttingen</div>
+              <p class="tl__text" data-i18n="tl.2019.x">Der Startpunkt. Kein Abitur, kein Studium in Sicht — aber der Wille, mehr draus zu machen.</p>
+            </div>
+            <div class="tl__photo" data-photo="timeline-2019"><div class="ph">FOTO 2019</div></div>
+          </div>
+        </div>
+
+        <div class="tl__item reveal">
+          <span class="tl__dot"></span>
+          <div class="tl__row">
+            <div>
+              <div class="tl__year">2021</div>
+              <div class="tl__title" data-i18n="tl.2021.t">Produktion bei STIEBEL ELTRON</div>
+              <p class="tl__text" data-i18n="tl.2021.x">Schichtbetrieb in der Wärmepumpen-Fertigung. Ehrliche Arbeit — und die Erkenntnis, dass ich mehr bauen will als Bauteile.</p>
+            </div>
+            <div class="tl__photo" data-photo="timeline-2021"><div class="ph">FOTO 2021</div></div>
+          </div>
+        </div>
+
+        <div class="tl__item reveal">
+          <span class="tl__dot"></span>
+          <div class="tl__row">
+            <div>
+              <div class="tl__year">2023</div>
+              <div class="tl__title" data-i18n="tl.2023.t">D2D-Vertrieb + nachts Code</div>
+              <p class="tl__text" data-i18n="tl.2023.x">Tagsüber Door-to-Door-Verkauf für Vodafone. Nachts Swift gelernt — autodidaktisch, ohne Kurs, ohne Mentor. Die Probleme aus dem Vertrieb wurden später meine erste App.</p>
+            </div>
+            <div class="tl__photo" data-photo="timeline-2023"><div class="ph">FOTO 2023</div></div>
+          </div>
+        </div>
+
+        <div class="tl__item reveal">
+          <span class="tl__dot"></span>
+          <div class="tl__row">
+            <div>
+              <div class="tl__year">2024</div>
+              <div class="tl__title" data-i18n="tl.2024.t">TrackX — live im App Store</div>
+              <p class="tl__text" data-i18n="tl.2024.x">Meine erste eigene App veröffentlicht: TrackX, das Tool das ich im Vertrieb selbst gebraucht hätte. Komplett allein: Konzept, Design, Entwicklung, Release.</p>
+            </div>
+            <div class="tl__photo" data-photo="timeline-2024"><div class="ph">FOTO 2024</div></div>
+          </div>
+        </div>
+
+        <div class="tl__item reveal">
+          <span class="tl__dot"></span>
+          <div class="tl__row">
+            <div>
+              <div class="tl__year">2025</div>
+              <div class="tl__title" data-i18n="tl.2025.t">FalconTech Solutions gegründet</div>
+              <p class="tl__text" data-i18n="tl.2025.x">Eigene Web- &amp; KI-Agentur mit Team. Über 4 Kundenprojekte live, CRM mit 350+ Leads, Buchungssysteme in Produktion.</p>
+            </div>
+            <div class="tl__photo" data-photo="timeline-2025"><div class="ph">FOTO 2025</div></div>
+          </div>
+        </div>
+
+        <div class="tl__item reveal">
+          <span class="tl__dot"></span>
+          <div class="tl__row">
+            <div>
+              <div class="tl__year">2026</div>
+              <div class="tl__title" data-i18n="tl.2026.t">AI Engineering — Masterschool</div>
+              <p class="tl__text" data-i18n="tl.2026.x">Weiterbildung „Software Engineering — AI for Developers" (IHK Generative AI Expert). Python, RAG, AI-Agenten, LLM-Evals — das Fundament wird offiziell.</p>
+            </div>
+            <div class="tl__photo" data-photo="timeline-2026"><div class="ph">FOTO 2026</div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-i18n="skills.title">Womit ich arbeite</h2>
+        <span class="count">STACK</span>
+      </div>
+      <div class="skills__grid reveal">
+        <div class="skills__cell">
+          <h3>iOS</h3>
+          <p>Swift, SwiftUI, StoreKit 2, MapKit, CoreLocation, Firebase</p>
+        </div>
+        <div class="skills__cell">
+          <h3>Web</h3>
+          <p>HTML, CSS, JavaScript, GSAP, Supabase, Vercel, Node.js</p>
+        </div>
+        <div class="skills__cell">
+          <h3>AI</h3>
+          <p data-i18n="skills.ai">Claude API, RAG, Prompt Engineering, Evals, lokale LLMs</p>
+        </div>
+        <div class="skills__cell">
+          <h3 data-i18n="skills.product.t">Produkt</h3>
+          <p data-i18n="skills.product.x">Von Idee bis Release: Konzept, Design, Entwicklung, Betrieb — alles aus einer Hand</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <p class="contact__big reveal">
+        <span data-i18n="contact.big1">Lass uns</span><br>
+        <a href="mailto:shahinmirjalili5@gmail.com" data-i18n="contact.big2">reden.</a>
+      </p>
+      <div class="contact__links reveal">
+        <a href="mailto:shahinmirjalili5@gmail.com">shahinmirjalili5@gmail.com</a>
+        <a href="https://github.com/ShahinMirJalili" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer wrap">
+    <span>© 2026 Shahin Mir Jalili</span>
+    <span data-i18n="footer.note">Selbst designt &amp; gebaut — ohne Baukasten.</span>
+  </footer>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/SplitText.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/i18n.js"></script>
+  <script src="assets/main.js"></script>
+</body>
+</html>
