@@ -193,6 +193,73 @@
     });
   });
 
+  /* ===== Maus-Blobs — Lerp-Follow + Idle-Drift (nur Pointer fine) ===== */
+  const pointerFine = window.matchMedia('(pointer: fine)').matches;
+  if (pointerFine) {
+    const blobA = document.getElementById('blobA');
+    const blobB = document.getElementById('blobB');
+    let mx = window.innerWidth * 0.5, my = window.innerHeight * 0.45;
+    let ax = mx, ay = my, bx = mx, by = my;
+    let lastMove = performance.now();
+    let idleAmp = 0;
+
+    window.addEventListener('mousemove', function (e) {
+      mx = e.clientX; my = e.clientY;
+      lastMove = performance.now();
+    }, { passive: true });
+
+    gsap.ticker.add(function () {
+      const now = performance.now();
+      const idle = now - lastMove > 2500;
+      idleAmp += ((idle ? 1 : 0) - idleAmp) * 0.02;
+      const t = now * 0.00022;
+      const tx = mx + Math.sin(t * 1.3) * 90 * idleAmp;
+      const ty = my + Math.cos(t) * 70 * idleAmp;
+      ax += (tx - ax) * 0.055;
+      ay += (ty - ay) * 0.055;
+      bx += (tx - bx) * 0.028;
+      by += (ty - by) * 0.028;
+      blobA.style.transform = 'translate3d(' + ax + 'px,' + ay + 'px,0)';
+      blobB.style.transform = 'translate3d(' + bx + 'px,' + by + 'px,0)';
+    });
+  }
+
+  /* ===== Custom-Cursor-Dot (nur Pointer fine) ===== */
+  if (pointerFine) {
+    document.documentElement.classList.add('has-cursor');
+    const dot = document.getElementById('cursorDot');
+    let cx = -100, cy = -100, dx = -100, dy = -100;
+    window.addEventListener('mousemove', function (e) { cx = e.clientX; cy = e.clientY; }, { passive: true });
+    gsap.ticker.add(function () {
+      dx += (cx - dx) * 0.3;
+      dy += (cy - dy) * 0.3;
+      dot.style.transform = 'translate3d(' + dx + 'px,' + dy + 'px,0)';
+    });
+    document.addEventListener('mouseover', function (e) {
+      if (e.target.closest('a, button, .case')) dot.classList.add('is-grown');
+    });
+    document.addEventListener('mouseout', function (e) {
+      if (e.target.closest('a, button, .case')) dot.classList.remove('is-grown');
+    });
+  }
+
+  /* ===== Marquee — Endlos-Band, Tempo an Scroll-Speed gekoppelt ===== */
+  const marqueeTrack = document.getElementById('marqueeTrack');
+  if (marqueeTrack) {
+    const marqueeTween = gsap.to(marqueeTrack, { xPercent: -50, ease: 'none', duration: 22, repeat: -1 });
+    let speed = 1, speedTarget = 1;
+    ScrollTrigger.create({
+      onUpdate: function (self) {
+        speedTarget = 1 + Math.min(Math.abs(self.getVelocity()) / 1200, 3);
+      }
+    });
+    gsap.ticker.add(function () {
+      speedTarget += (1 - speedTarget) * 0.05; // fällt von selbst auf 1 zurück
+      speed += (speedTarget - speed) * 0.08;
+      marqueeTween.timeScale(speed);
+    });
+  }
+
   /* Initiale Sprache anwenden — erst wenn Fonts geladen sind (SplitText misst sonst falsch) */
   Promise.all([
     document.fonts.load('600 1em "Clash Display"'),
