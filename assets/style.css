@@ -343,6 +343,13 @@ body::after {
   filter: none;
 }
 .tl__item.is-in .tl__photo--logo img, .tl__photo--logo:hover img { filter: none; }
+.tl__photo--logo.tl__photo--color img { width: 46%; }
+.tl__photo--word span {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem); line-height: 0.95;
+  letter-spacing: 0.04em; color: var(--ink);
+  text-align: center;
+}
 .tl__ghostyear {
   position: absolute; right: 0; top: -0.2em;
   font-family: var(--display); font-weight: 700;
