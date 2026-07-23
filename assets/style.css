@@ -332,6 +332,17 @@ body::after {
 .tl__item.is-in .tl__photo img, .tl__photo:hover img { filter: grayscale(0.6) contrast(1.05); }
 .tl__photo--color img, .tl__item.is-in .tl__photo--color img { filter: none; }
 .tl__photo--color::after { background: none; }
+.tl__photo--logo {
+  display: grid; place-items: center;
+  background:
+    radial-gradient(120% 90% at 25% 15%, rgba(255,90,31,0.16), transparent 55%),
+    var(--bg-soft);
+}
+.tl__photo--logo img {
+  width: 72%; height: auto; object-fit: contain;
+  filter: none;
+}
+.tl__item.is-in .tl__photo--logo img, .tl__photo--logo:hover img { filter: none; }
 .tl__ghostyear {
   position: absolute; right: 0; top: -0.2em;
   font-family: var(--display); font-weight: 700;
@@ -375,6 +386,8 @@ body::after {
   padding: 1.6rem 0; color: var(--ink-dim); font-size: 0.8rem;
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem;
 }
+.footer__credit { flex-basis: 100%; font-size: 0.7rem; opacity: 0.6; }
+.footer__credit a { text-decoration: underline; }
 
 /* ===== Reveals (JS setzt .is-in) ===== */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
